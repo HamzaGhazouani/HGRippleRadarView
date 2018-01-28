@@ -1,0 +1,6 @@
+framework module HGRippleRadarView {
+  umbrella header "HGRippleRadarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

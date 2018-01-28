@@ -1,0 +1,6 @@
+framework module Pods_HGRippleRadarView_Example {
+  umbrella header "Pods-HGRippleRadarView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

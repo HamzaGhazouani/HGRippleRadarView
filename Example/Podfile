@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HGRippleRadarView_Example' do
+  pod 'HGRippleRadarView', :path => '../'
+
+  target 'HGRippleRadarView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
