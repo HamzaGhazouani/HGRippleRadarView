@@ -16,6 +16,7 @@
 ![](/Screenshots/Radar.gif) ![](/Screenshots/Ripple.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<br />
 This project is inspired by: https://dribbble.com/shots/2242921-Find-Nearby-Users-Concept
 
 ## Requirements
