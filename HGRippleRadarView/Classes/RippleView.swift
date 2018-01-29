@@ -22,11 +22,6 @@ public class RippleView: UIView {
     /// the center disk point
     private var diskLayer: CAShapeLayer!
     
-    /// The maximum possible radius of circle
-    private var maxCircleRadius: CGFloat {
-        return (circlesPadding * CGFloat(numberOfCircles - 1) + minimumCircleRadius)
-    }
-    
     /// The duration to animate the central disk
     private var centerAnimationDuration: CFTimeInterval {
         return CFTimeInterval(animationDuration) * 0.90
@@ -43,7 +38,15 @@ public class RippleView: UIView {
     /// The timer used to start / stop disk animation
     private var diskAnimationTimer: Timer?
     
-    // MARK: internal properties
+    // MARK: Internal properties
+    
+    /// The maximum possible radius of circle
+    var maxCircleRadius: CGFloat {
+        if numberOfCircles == 0 {
+            return min(bounds.midX, bounds.midY)
+        }
+        return (circlesPadding * CGFloat(numberOfCircles - 1) + minimumCircleRadius)
+    }
     
     /// the circles surrounding the disk
     var circlesLayer = [CAShapeLayer]()
@@ -71,11 +74,19 @@ public class RippleView: UIView {
     @IBInspectable public var diskColor: UIColor = .ripplePink {
         didSet {
             diskLayer.fillColor = diskColor.cgColor
+            centerAnimatedLayer.fillColor = diskColor.cgColor
         }
     }
     
     /// The number of circles to draw around the disk, the default value is 3, if the forcedMaximumCircleRadius is used the number of drawn circles could be less than numberOfCircles
     @IBInspectable public var numberOfCircles: Int = 3 {
+        didSet {
+            redrawCircles()
+        }
+    }
+    
+    /// The padding between circles
+    @IBInspectable public var paddingBetweenCircles: CGFloat = -1 {
         didSet {
             redrawCircles()
         }
@@ -92,13 +103,6 @@ public class RippleView: UIView {
     
     /// The color of the on status of the circle, used for animation
     @IBInspectable public var circleOnColor: UIColor = .rippleWhite
-    
-    /// The padding between circles
-    @IBInspectable public var paddingBetweenCircles: CGFloat = -1 {
-        didSet {
-            redrawCircles()
-        }
-    }
     
     /// The minimum radius of circles, used to make space between the disk and the first circle, the radius must be grather than 5px , because if not the first circle will not be shown, the default value is 10, it's recommanded to use a value grather than the disk radius if you would like to show circles outside disk
     @IBInspectable public var minimumCircleRadius: CGFloat = 10 {
@@ -118,6 +122,14 @@ public class RippleView: UIView {
         }
     }
     
+    /// The bounds rectangle, which describes the view’s location and size in its own coordinate system.
+    public override var bounds: CGRect {
+        didSet {
+            // the sublyers are based in the view size, so if the view change the size, we should redraw sublyers
+            redrawDisks()
+            redrawCircles()
+        }
+    }
     // MARK: init methods
     
     /// Initializes and returns a newly allocated view object with the specified frame rectangle.
@@ -144,7 +156,7 @@ public class RippleView: UIView {
         animateSublayers()
     }
     
-    // MARK: Utilities methods
+    // MARK: Drawing methods
     
     /// Calculate the radius of a circle by using its index
     ///

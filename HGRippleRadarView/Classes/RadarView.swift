@@ -16,7 +16,7 @@ final public class RadarView: RippleView {
     // MARK: public properties
     
     /// the maximum number of items that can be shown in the radar view, if you use more, some layers will overlaying other layers
-    public var circleCapacity: Int {
+    public var radarCapacity: Int {
         if allPossiblePositions.isEmpty {
             findPossiblePositions()
         }
@@ -26,6 +26,26 @@ final public class RadarView: RippleView {
     /// The padding between items, the default value is 10
     @IBInspectable public var paddingBetweenItems: CGFloat = 10 {
         didSet {
+            redrawItems()
+        }
+    }
+    
+    /// The bounds rectangle, which describes the view’s location and size in its own coordinate system.
+    public override var bounds: CGRect {
+        didSet {
+            // the sublyers are based in the view size, so if the view change the size, we should redraw sublyers
+            let viewRadius = min(bounds.midX, bounds.midY)
+            minimumCircleRadius = viewRadius > 120 ? 60 : diskRadius + 15
+            redrawItems()
+        }
+    }
+    
+    /// The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.
+    public override var frame: CGRect {
+        didSet {
+            // the sublyers are based in the view size, so if the view change the size, we should redraw sublyers
+            let viewRadius = min(bounds.midX, bounds.midY)
+            minimumCircleRadius = viewRadius > 120 ? 60 : diskRadius + 15
             redrawItems()
         }
     }
@@ -57,10 +77,9 @@ final public class RadarView: RippleView {
     // MARK: View Life Cycle
     
     override func setup() {
-        if circlesPadding > 40 {
-            paddingBetweenCircles = 40
-        }
-        minimumCircleRadius = 60
+         paddingBetweenCircles = 40
+        let viewRadius = min(bounds.midX, bounds.midY)
+        minimumCircleRadius = viewRadius > 120 ? 60 : diskRadius + 15
         backgroundColor = .ripplePinkDark
         
         super.setup()
@@ -70,7 +89,6 @@ final public class RadarView: RippleView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-       redrawItems()
     }
     
     override func redrawCircles() {
