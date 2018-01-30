@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HGRippleRadarView  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="HGRippleRadarView  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">HGRippleRadarView Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">HGRippleRadarView Reference</a>
+        <img id="carat" src="img/carat.png" />
+        HGRippleRadarView  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RadarView.html">RadarView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RippleView.html">RippleView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/RadarViewDataSource.html">RadarViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RadarViewDelegate.html">RadarViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Item.html">Item</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='hgrippleradarview' class='heading'>HGRippleRadarView</h1>
+
+<p><a href="https://travis-ci.org/HamzaGhazouani/HGRippleRadarView"><img src="http://img.shields.io/travis/HamzaGhazouani/HGRippleRadarView.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/HGRippleRadarView"><img src="https://img.shields.io/cocoapods/v/HGRippleRadarView.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/HGRippleRadarView"><img src="https://img.shields.io/cocoapods/l/HGRippleRadarView.svg?style=flat" alt="License"></a>
+<a href=""><img src="https://img.shields.io/badge/language-Swift-orange.svg?style=flat" alt="Language"></a>
+<a href=""><img src="https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg?style=flat" alt="Supports"></a>
+<a href="http://cocoapods.org/pods/HGRippleRadarView"><img src="https://img.shields.io/cocoapods/p/HGRippleRadarView.svg?style=flat" alt="Platform"></a>
+<br /></p>
+
+<p><a href="https://twitter.com/GhazouaniHamza"><img src="https://img.shields.io/badge/contact-@GhazouaniHamza-blue.svg?style=flat" alt="Twitter: @GhazouaniHamza"></a>
+<a href="http://clayallsopp.github.io/readme-score?url=https://github.com/hamzaghazouani/hgrippleradarview"><img src="http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/hamzaghazouani/hgrippleradarview" alt="Readme Score"></a></p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p><img src="/Screenshots/Radar.gif" alt=""> <img src="/Screenshots/Ripple.gif" alt=""></p>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
+<br />
+This project is inspired by: <a href="https://dribbble.com/shots/2242921-Find-Nearby-Users-Concept">https://dribbble.com/shots/2242921-Find-Nearby-Users-Concept</a></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 9.2</li>
+</ul>
+<h2 id='you-also-may-like' class='heading'>You also may like</h2>
+
+<ul>
+<li><strong><a href="https://github.com/HamzaGhazouani/HGCircularSlider">HGCircularSlider</a></strong> - A custom reusable circular slider control for iOS application.</li>
+<li><strong><a href="https://github.com/HamzaGhazouani/HGPlaceholders">HGPlaceholders</a></strong> - Nice library to show placeholders and Empty States for any UITableView/UICollectionView in your project Edit</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>HGRippleRadarView is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'HGRippleRadarView'</span>
+</code></pre>
+
+<p>HGRippleRadarView is also available through <a href="https://github.com/Carthage/Carthage">Carthage</a>. To install
+it, simply add the following line to your Cartfile:</p>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"HamzaGhazouani/HGRippleRadarView"</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<ol>
+<li>Change the class of a view from UIView to RippleView or RadarView</li>
+<li>Programmatically:</li>
+</ol>
+<pre class="highlight plaintext"><code>let rippleView = RippleView(frame: myFrame)
+
+</code></pre>
+<pre class="highlight plaintext"><code>let radarView = RadarView(frame: myFrame)
+
+</code></pre>
+<h2 id='customization' class='heading'>Customization</h2>
+<h4 id='rippleview' class='heading'>RippleView</h4>
+<h5 id='diskradius' class='heading'>diskRadius</h5>
+
+<p>The radius of the central disk in the view, if you would like to hide it, you can set the radius to 0
+<img src="/Screenshots/diskRadius.gif" alt=""></p>
+<h5 id='diskcolor' class='heading'>diskColor</h5>
+
+<p>The color of the central disk in the view, the default color is ripplePink color
+<img src="/Screenshots/diskColor.gif" alt=""></p>
+<h5 id='minimumcircleradius' class='heading'>minimumCircleRadius</h5>
+
+<p>This property make distance between the first circle and the central disk<br>
+<img src="/Screenshots/minimumCircleRadius.gif" alt=""></p>
+<h5 id='numberofcircles' class='heading'>numberOfCircles</h5>
+
+<p>The number of circles to draw around the disk, the default value is 3
+<img src="/Screenshots/numberOfCircles.gif" alt=""></p>
+<h5 id='paddingbetweencircles' class='heading'>paddingBetweenCircles</h5>
+
+<p>The padding between circles, circles could be drawn outside the frame 
+<img src="/Screenshots/paddingBetweenCircles.gif" alt=""></p>
+<h5 id='circleoffcolor' class='heading'>circleOffColor</h5>
+
+<p>The color of the off status of the circle, used for animation</p>
+<h5 id='circleoncolor' class='heading'>circleOnColor</h5>
+
+<p>The color of the on status of the circle, used for animation
+<img src="/Screenshots/OffOnColors.gif" alt=""></p>
+<h5 id='animationduration' class='heading'>animationDuration</h5>
+
+<p>The duration of the animation, the default value is 0.9
+<img src="/Screenshots/animationDuration.gif" alt=""></p>
+
+<p><br />
+You can start/ stop the animation at any time by calling <code>startAnimation()</code> &amp; <code>stopAnimation()</code></p>
+<h4 id='radarview' class='heading'>RadarView</h4>
+<h5 id='paddingbetweenitems' class='heading'>paddingBetweenItems</h5>
+
+<p>The padding between items, the default value is 10
+<img src="/Screenshots/paddingBetweenItems.gif" alt=""></p>
+<h4 id='add-items' class='heading'>Add items</h4>
+
+<p>If you would like to add one item, use the method <code>add(item:using:)</code>
+If you would like to add multiple items, it&rsquo;s recommended to use the method <code>add(items:using:)</code></p>
+<h4 id='remove-item' class='heading'>remove item</h4>
+
+<p>If you would like to remove an item, use the method <code>remove(item:)</code></p>
+<h4 id='custom-item' class='heading'>Custom item</h4>
+
+<p>If you would like to customize items, use the protocol <code><a href="Protocols/RadarViewDataSource.html">RadarViewDataSource</a></code> and implement: </p>
+<pre class="highlight plaintext"><code>radarView?.dataSource = self 
+...
+func radarView(radarView: RadarView, viewFor item: Item, preferredSize: CGSize) -&gt; UIView {
+        let myCustomItemView = UIView(frame: CGRect(x: 0, y: 0, width: preferredSize.width, height: preferredSize.height))
+        return myCustomItemView
+}
+</code></pre>
+<h4 id='callback' class='heading'>CallBack</h4>
+
+<p>If you would like to receive action on items, use the protocol <code><a href="Protocols/RadarViewDelegate.html">RadarViewDelegate</a></code> and implement: </p>
+<pre class="highlight plaintext"><code>radarView?.delegate = self 
+...
+ func radarView(radarView: RadarView, didSelect item: Item) {
+        print(item.uniqueKey)
+}
+</code></pre>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Full documentation is available on <a href="http://cocoadocs.org/docsets/HGRippleRadarView/">CocoaDocs</a>.<br/>
+You can also install documentation locally using <a href="https://github.com/realm/jazzy">jazzy</a>.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>HamzaGhazouani, <a href="mailto:hamza.ghazouani@gmail.com">hamza.ghazouani@gmail.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>HGRippleRadarView is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/HamzaGhazouani/HGRippleRadarView" target="_blank" rel="external">HamzaGhazouani</a>. All rights reserved. (Last updated: 2018-01-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
