@@ -9,8 +9,8 @@
 <br />
 
 [![Twitter: @GhazouaniHamza](https://img.shields.io/badge/contact-@GhazouaniHamza-blue.svg?style=flat)](https://twitter.com/GhazouaniHamza)
-[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/hamzaghazouani/hgrippleradarview)](http://clayallsopp.github.io/readme-score?url=https://github.com/hamzaghazouani/hgrippleradarview)
 [![Documentation](https://img.shields.io/badge/Documentation-available-0D2D54.svg)](https://hamzaghazouani.github.io/HGRippleRadarView/)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/hamzaghazouani/hgrippleradarview)](http://clayallsopp.github.io/readme-score?url=https://github.com/hamzaghazouani/hgrippleradarview)
 
 ## Example
 
