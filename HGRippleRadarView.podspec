@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HGRippleRadarView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.swift_version    = '4.0'
-  s.summary          = 'UI for radar and ripple views'
+  s.summary          = 'A beautiful radar view to show nearby users with ripple animation, fully customizable'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
-UI for radar and ripple views fully customizable
+A beautiful radar view to show nearby users for example 
+You can also use this library to show views with ripple animation 
 DESC
 
   s.homepage         = 'https://github.com/HamzaGhazouani/HGRippleRadarView'
