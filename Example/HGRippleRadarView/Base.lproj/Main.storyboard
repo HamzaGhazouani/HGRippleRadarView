@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KoA-4d-5Qj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hpV-0n-Wcf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oei-2o-i6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1298" y="941"/>
+            <point key="canvasLocation" x="-1154" y="940"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BXP-Nu-wlY">
@@ -128,13 +128,14 @@
                     <connections>
                         <segue destination="KoA-4d-5Qj" kind="relationship" relationship="viewControllers" id="WWC-at-u5g"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="h7X-sX-krS"/>
+                        <segue destination="Ox8-e0-MhN" kind="relationship" relationship="viewControllers" id="3zt-jV-i6A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1h-0L-uMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-785" y="172"/>
+            <point key="canvasLocation" x="-364" y="99"/>
         </scene>
-        <!--Animals View Controller-->
+        <!--Item-->
         <scene sceneID="xFU-qr-Q6Z">
             <objects>
                 <viewController id="Ox8-e0-MhN" customClass="AnimalsViewController" customModule="HGRippleRadarView_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXP-uy-vJO" customClass="RadarView" customModule="HGRippleRadarView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="diskColor">
@@ -162,7 +163,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kos-jG-ZbC" customClass="AnimalView" customModule="HGRippleRadarView_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="757" width="375" height="160"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="160"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bv7-Ha-hIw">
                                         <rect key="frame" x="285" y="-30" width="60" height="60"/>
@@ -250,6 +251,7 @@
                             <constraint firstItem="JXP-uy-vJO" firstAttribute="leading" secondItem="7wc-Pm-wv1" secondAttribute="leading" id="z96-mF-QQs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mLi-Zw-N2b"/>
                     <connections>
                         <outlet property="bottomLayoutConstraint" destination="xrF-gb-ban" id="JwV-eV-T71"/>
                         <outlet property="radarView" destination="JXP-uy-vJO" id="6bY-TS-35X"/>
@@ -258,25 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVL-k9-TZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-150" y="171"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bFx-M1-1zL">
-            <objects>
-                <viewController id="elA-9h-EBZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zpy-Wy-71I"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Rh-1K-BOa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vOE-4A-PI5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sZU-pF-r0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="598" y="645"/>
+            <point key="canvasLocation" x="418" y="940"/>
         </scene>
     </scenes>
     <resources>
