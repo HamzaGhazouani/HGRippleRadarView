@@ -14,7 +14,7 @@
 
 ## Example
 
-![](/Screenshots/radar_example_1.gif) ![](/Screenshots/radar_example_2.gif) ![](/Screenshots/ripple_example.gif)
+![](/Screenshots/radar_example_2.gif) ![](/Screenshots/radar_example_1.gif) ![](/Screenshots/ripple_example.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 <br />
