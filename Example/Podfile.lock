@@ -1,16 +1,19 @@
 PODS:
-  - HGRippleRadarView (0.1.0)
+  - HGRippleRadarView (0.1.1)
+  - TouchVisualizer (3.0.0)
 
 DEPENDENCIES:
   - HGRippleRadarView (from `../`)
+  - TouchVisualizer (~> 3.0.0)
 
 EXTERNAL SOURCES:
   HGRippleRadarView:
     :path: ../
 
 SPEC CHECKSUMS:
-  HGRippleRadarView: 1d7bae0bcded1479ec84e3932cb6bc96f398c815
+  HGRippleRadarView: be3236936df3d1717b90de0d0f155833297339d9
+  TouchVisualizer: 5cb21ff505c4e60166fe0c8e84a82e5d9ee9e64c
 
-PODFILE CHECKSUM: f58a0d1f914ebad54541a6b4bf3c2fad0cc483a0
+PODFILE CHECKSUM: 8fd59589cc5de491af0fe0a1c17ac7108545b1b3
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.4.0

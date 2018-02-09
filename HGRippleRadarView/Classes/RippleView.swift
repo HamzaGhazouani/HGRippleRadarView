@@ -29,6 +29,9 @@ public class RippleView: UIView {
     
     /// The duration to animate one circle
     private var circleAnimationDuration: CFTimeInterval {
+        if circlesLayer.count ==  0 {
+            return CFTimeInterval(animationDuration)
+        }
         return CFTimeInterval(animationDuration) / CFTimeInterval(circlesLayer.count)
     }
     
@@ -186,7 +189,7 @@ public class RippleView: UIView {
     /// Draw central disk and the disk for the central animation
     private func drawDisks() {
         diskLayer = Drawer.diskLayer(radius: diskRadius, origin: bounds.center, color: diskColor.cgColor)
-        layer.addSublayer(diskLayer)
+        layer.insertSublayer(diskLayer, at: 0)
         
         centerAnimatedLayer = Drawer.diskLayer(radius: diskRadius, origin: bounds.center, color: diskColor.cgColor)
         centerAnimatedLayer.opacity = 0.3

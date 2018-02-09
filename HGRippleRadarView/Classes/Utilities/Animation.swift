@@ -61,7 +61,7 @@ public struct Animation {
     ///   - values: An array of objects that specify the keyframe values to use for the animation.
     ///   - duration: the duration of the animation, the default value is 0.3
     /// - Returns: a CAKeyframeAnimation object
-    public static func transform(times: [NSNumber] = [0.0, 0.5, 1.0], values: [CGFloat] = [0.0, 1.4, 1.0], duration: CFTimeInterval = 0.3) -> CAKeyframeAnimation {
+    public static func transform(times: [NSNumber] = [0.0, 0.5, 1.0], values: [CGFloat] = [0.0, 1.4, 1.0], duration: CFTimeInterval = 0.7) -> CAKeyframeAnimation {
         var transformValues = [NSValue]()
         values.forEach {
             transformValues.append(NSValue(caTransform3D: CATransform3DMakeScale($0, $0, 1.0)))
@@ -70,9 +70,9 @@ public struct Animation {
         transformAnimation.duration = duration
         transformAnimation.values = transformValues
         transformAnimation.keyTimes = times
-        transformAnimation.autoreverses = false
         transformAnimation.fillMode = kCAFillModeForwards
         transformAnimation.isRemovedOnCompletion = false
+        
         return transformAnimation
     }
     

@@ -14,6 +14,10 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7376FE0E32C55B908574B403 /* Pods_HGRippleRadarView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397F9779B88E6AC5A1F7C2 /* Pods_HGRippleRadarView_Example.framework */; };
 		7ABCDEC5201E082E003DC334 /* RadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABCDEC4201E082E003DC334 /* RadarViewController.swift */; };
+		7AC105962028AD0300E04C01 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC105952028AD0300E04C01 /* AnimalsViewController.swift */; };
+		7AC105982028AF0500E04C01 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC105972028AF0500E04C01 /* AnimalView.swift */; };
+		7AC1059A2028B04600E04C01 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC105992028B04600E04C01 /* Animal.swift */; };
+		7AC1059C2028B17B00E04C01 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1059B2028B17B00E04C01 /* UIColor.swift */; };
 		B287350DDA5B3FC6D124B2AF /* Pods_HGRippleRadarView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE2B6E1456FAB3C3584DB0 /* Pods_HGRippleRadarView_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7ABCDEC4201E082E003DC334 /* RadarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarViewController.swift; sourceTree = "<group>"; };
+		7AC105952028AD0300E04C01 /* AnimalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewController.swift; sourceTree = "<group>"; };
+		7AC105972028AF0500E04C01 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
+		7AC105992028B04600E04C01 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		7AC1059B2028B17B00E04C01 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		81AA80712E8717DE3BD650EF /* Pods-HGRippleRadarView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGRippleRadarView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGRippleRadarView_Example/Pods-HGRippleRadarView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		951FCC503979FD2CCD3CBEFC /* Pods-HGRippleRadarView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGRippleRadarView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGRippleRadarView_Tests/Pods-HGRippleRadarView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CE2B6E1456FAB3C3584DB0 /* Pods_HGRippleRadarView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGRippleRadarView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +103,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				7ABCDEC4201E082E003DC334 /* RadarViewController.swift */,
+				7AC105952028AD0300E04C01 /* AnimalsViewController.swift */,
+				7AC105972028AF0500E04C01 /* AnimalView.swift */,
+				7AC105992028B04600E04C01 /* Animal.swift */,
+				7AC1059B2028B17B00E04C01 /* UIColor.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -292,10 +304,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HGRippleRadarView_Example/Pods-HGRippleRadarView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HGRippleRadarView/HGRippleRadarView.framework",
+				"${BUILT_PRODUCTS_DIR}/TouchVisualizer/TouchVisualizer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGRippleRadarView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TouchVisualizer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,8 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC105982028AF0500E04C01 /* AnimalView.swift in Sources */,
+				7AC1059C2028B17B00E04C01 /* UIColor.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				7ABCDEC5201E082E003DC334 /* RadarViewController.swift in Sources */,
+				7AC105962028AD0300E04C01 /* AnimalsViewController.swift in Sources */,
+				7AC1059A2028B04600E04C01 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

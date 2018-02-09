@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'HGRippleRadarView_Example' do
   pod 'HGRippleRadarView', :path => '../'
+  pod "TouchVisualizer", '~>3.0.0'
+
 
   target 'HGRippleRadarView_Tests' do
     inherit! :search_paths

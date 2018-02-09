@@ -23,7 +23,7 @@ class RadarViewController: UIViewController {
         super.viewDidLoad()
         
         radarView?.delegate = self
-        timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(addItem), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(addItem), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +32,7 @@ class RadarViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
     
     @objc func addItem() {
@@ -48,14 +49,14 @@ class RadarViewController: UIViewController {
     
     func addMultipleItems() {
         var tempItems = [Item]()
-        for _ in 0 ..< 5 {
+        for _ in 0 ..< 3 {
             let item = Item(uniqueKey: "item\(index)", value:"item\(index)")
             tempItems.append(item)
             index += 1
         }
         items.append(contentsOf: tempItems)
         radarView?.add(items: tempItems)
-        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(removeFirstItem), userInfo: nil, repeats: false)
+//        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(removeFirstItem), userInfo: nil, repeats: false)
     }
     
     @objc func removeFirstItem() {
@@ -64,8 +65,12 @@ class RadarViewController: UIViewController {
 }
 
 extension RadarViewController: RadarViewDelegate {
-    
     func radarView(radarView: RadarView, didSelect item: Item) {
         print(item.uniqueKey)
     }
+    
+    func radarView(radarView: RadarView, didDeselect item: Item) {}
+    
+    func radarView(radarView: RadarView, didDeselectAllItems lastSelectedItem: Item) {}
 }
+

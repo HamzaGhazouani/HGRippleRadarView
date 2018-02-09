@@ -9,7 +9,7 @@ import UIKit
 
 
 /// Item object
-public struct Item {
+public class Item {
     
     /// The unique key of the object
     public let uniqueKey: String
