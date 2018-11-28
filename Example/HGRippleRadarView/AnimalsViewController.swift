@@ -39,14 +39,14 @@ class AnimalsViewController: UIViewController {
     
     private func enlarge(view: UIView?) {
         let animation = Animation.transform(from: 1.0, to: 1.5)
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
         view?.layer.add(animation, forKey: "transform")
     }
     
     private func reduce(view: UIView?) {
         let animation = Animation.transform(from: 1.5, to: 1.0)
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
         view?.layer.add(animation, forKey: "transform")
     }
